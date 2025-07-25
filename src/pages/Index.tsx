@@ -4,243 +4,249 @@ import { Badge } from "@/components/ui/badge";
 import Icon from "@/components/ui/icon";
 
 export default function Index() {
-  const features = [
-    {
-      icon: "Brain",
-      title: "Искусственный интеллект",
-      description: "Передовые алгоритмы машинного обучения для решения сложных задач",
-      badge: "AI Core"
-    },
-    {
-      icon: "Zap",
-      title: "Молниеносная скорость",
-      description: "Обработка данных в реальном времени с минимальной задержкой",
-      badge: "Performance"
-    },
-    {
-      icon: "Shield",
-      title: "Безопасность данных",
-      description: "Многоуровневая защита и шифрование всех операций",
-      badge: "Security"
-    },
-    {
-      icon: "Cpu",
-      title: "Нейронные сети",
-      description: "Глубокое обучение с архитектурой transformer",
-      badge: "Neural"
-    },
-    {
-      icon: "Database",
-      title: "Большие данные",
-      description: "Анализ и обработка петабайтов информации",
-      badge: "Big Data"
-    },
-    {
-      icon: "Globe",
-      title: "Глобальная сеть",
-      description: "Распределенная инфраструктура по всему миру",
-      badge: "Global"
-    }
-  ];
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-cyan-50">
-      {/* Header */}
-      <header className="container mx-auto px-4 py-6">
-        <nav className="flex items-center justify-between">
-          <div className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center">
-              <Icon name="Cpu" size={20} className="text-white" />
-            </div>
-            <span className="text-xl font-bold text-gray-900">AI Platform</span>
-          </div>
-          <div className="hidden md:flex items-center space-x-8">
-            <a href="#features" className="text-gray-600 hover:text-blue-600 transition-colors">Возможности</a>
-            <a href="#technology" className="text-gray-600 hover:text-blue-600 transition-colors">Технологии</a>
-            <a href="#contact" className="text-gray-600 hover:text-blue-600 transition-colors">Контакты</a>
-          </div>
-          <Button className="bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600">
-            Начать
-          </Button>
-        </nav>
-      </header>
-
-      {/* Hero Section */}
-      <section className="container mx-auto px-4 py-20 text-center">
-        <div className="max-w-4xl mx-auto animate-fade-in">
-          <Badge className="mb-6 bg-blue-100 text-blue-700 hover:bg-blue-200">
-            <Icon name="Sparkles" size={16} className="mr-2" />
-            Новая эра технологий
-          </Badge>
-          <h1 className="text-5xl md:text-7xl font-bold text-gray-900 mb-6 leading-tight">
-            Будущее
-            <span className="bg-gradient-to-r from-blue-500 to-cyan-500 bg-clip-text text-transparent"> ИИ </span>
-            уже здесь
-          </h1>
-          <p className="text-xl text-gray-600 mb-10 max-w-3xl mx-auto leading-relaxed">
-            Откройте безграничные возможности искусственного интеллекта. 
-            Наша платформа использует передовые технологии для революционных решений.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-lg px-8 py-4 h-auto">
-              <Icon name="Rocket" size={20} className="mr-2" />
-              Запустить платформу
-            </Button>
-            <Button size="lg" variant="outline" className="text-lg px-8 py-4 h-auto border-2 border-blue-200 hover:border-blue-300">
-              <Icon name="Play" size={20} className="mr-2" />
-              Смотреть демо
-            </Button>
-          </div>
-        </div>
-      </section>
-
-      {/* Features Grid */}
-      <section id="features" className="container mx-auto px-4 py-20">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Ключевые возможности</h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Передовые технологии для решения самых сложных задач
-          </p>
-        </div>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+      {/* Mobile-First Design */}
+      <div className="w-full max-w-sm mx-auto bg-white min-h-screen">
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {features.map((feature, index) => (
-            <Card 
-              key={index} 
-              className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 bg-white/70 backdrop-blur-sm"
+        {/* Header with Logo */}
+        <div className="bg-gradient-to-r from-slate-800 to-blue-900 px-6 py-4 rounded-b-3xl">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center space-x-3">
+              <div className="w-10 h-10 bg-gradient-to-r from-blue-400 to-cyan-400 rounded-xl flex items-center justify-center">
+                <div className="w-6 h-6 bg-slate-800 rounded-md"></div>
+              </div>
+              <div>
+                <h1 className="text-white text-xl font-bold">ARTIFICIAL</h1>
+                <h2 className="text-white text-xl font-bold">INTELLIGENCE</h2>
+              </div>
+            </div>
+            <Button 
+              variant="secondary" 
+              size="sm" 
+              className="bg-white/20 text-white border-white/30 hover:bg-white/30"
             >
-              <CardHeader className="pb-4">
-                <div className="flex items-center justify-between mb-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center">
-                    <Icon name={feature.icon as any} size={24} className="text-white" />
-                  </div>
-                  <Badge variant="secondary" className="bg-blue-50 text-blue-700">
-                    {feature.badge}
-                  </Badge>
-                </div>
-                <CardTitle className="text-xl font-semibold text-gray-900">
-                  {feature.title}
+              Secondary
+            </Button>
+          </div>
+        </div>
+
+        {/* SubHeading Section */}
+        <div className="px-6 py-6">
+          <div className="flex items-center space-x-3 mb-6">
+            <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl"></div>
+            <div>
+              <h3 className="text-lg font-semibold text-gray-900">SubHeading</h3>
+              <p className="text-sm text-gray-600">Cady Modern adipesisideri, Sed, White</p>
+            </div>
+          </div>
+
+          {/* Buttons Row */}
+          <div className="flex space-x-3 mb-8">
+            <Button 
+              variant="outline" 
+              size="sm"
+              className="border-2 border-gray-300 text-gray-700 hover:border-blue-500"
+            >
+              Button
+            </Button>
+            <Button 
+              size="sm"
+              className="bg-blue-500 hover:bg-blue-600 text-white"
+            >
+              Button Button
+            </Button>
+            <Button 
+              variant="outline" 
+              size="sm"
+              className="border-2 border-gray-300 text-gray-700 hover:border-blue-500"
+            >
+              Secondary
+            </Button>
+          </div>
+
+          {/* AI Icons Grid */}
+          <div className="grid grid-cols-4 gap-6 mb-8">
+            <div className="flex flex-col items-center">
+              <Icon name="Network" size={32} className="text-gray-700 mb-2" />
+            </div>
+            <div className="flex flex-col items-center">
+              <Icon name="Sparkles" size={32} className="text-gray-700 mb-2" />
+            </div>
+            <div className="flex flex-col items-center">
+              <Icon name="Brain" size={32} className="text-gray-700 mb-2" />
+            </div>
+            <div className="flex flex-col items-center">
+              <Icon name="User" size={32} className="text-gray-700 mb-2" />
+            </div>
+            <div className="flex flex-col items-center">
+              <Icon name="RefreshCw" size={32} className="text-gray-700 mb-2" />
+            </div>
+            <div className="flex flex-col items-center">
+              <Icon name="Download" size={32} className="text-gray-700 mb-2" />
+            </div>
+            <div className="flex flex-col items-center">
+              <Icon name="Upload" size={32} className="text-gray-700 mb-2" />
+            </div>
+            <div className="flex flex-col items-center">
+              <Icon name="Cpu" size={32} className="text-gray-700 mb-2" />
+            </div>
+          </div>
+
+          {/* AI Article Card */}
+          <div className="mb-8">
+            <div className="flex items-center justify-between mb-4">
+              <h3 className="text-lg font-semibold text-gray-900">AI Article</h3>
+              <Badge variant="outline" className="border-gray-300 text-gray-600">
+                Secondary
+              </Badge>
+            </div>
+            
+            <Card className="border-2 border-gray-200 shadow-sm">
+              <CardHeader className="pb-3">
+                <CardTitle className="text-base font-semibold text-gray-900">
+                  AI Article
                 </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription className="text-gray-600 leading-relaxed">
-                  {feature.description}
+                <CardDescription className="text-sm text-gray-600">
+                  Title/description
                 </CardDescription>
+              </CardHeader>
+              <CardContent className="pt-0">
+                <div className="space-y-2 mb-4">
+                  <div className="h-2 w-full bg-gray-200 rounded"></div>
+                  <div className="h-2 w-3/4 bg-gray-200 rounded"></div>
+                  <div className="h-2 w-1/2 bg-gray-200 rounded"></div>
+                </div>
+                <Button size="sm" className="bg-blue-500 hover:bg-blue-600 text-white">
+                  Button
+                </Button>
               </CardContent>
             </Card>
-          ))}
-        </div>
-      </section>
+          </div>
 
-      {/* Technology Section */}
-      <section id="technology" className="bg-gradient-to-r from-blue-600 to-cyan-600 py-20">
-        <div className="container mx-auto px-4 text-center">
-          <div className="max-w-4xl mx-auto text-white">
-            <h2 className="text-4xl font-bold mb-6">Передовые технологии</h2>
-            <p className="text-xl mb-10 opacity-90">
-              Мы используем самые современные алгоритмы и архитектуры для достижения максимальной эффективности
-            </p>
+          {/* Search Bar */}
+          <div className="mb-8">
+            <div className="relative">
+              <div className="w-full h-12 bg-gray-100 rounded-lg border-2 border-gray-200 flex items-center px-4">
+                <Icon name="Search" size={20} className="text-gray-400" />
+                <span className="ml-3 text-gray-400 text-sm">Search...</span>
+              </div>
+              <div className="absolute right-3 top-1/2 transform -translate-y-1/2">
+                <Icon name="Menu" size={20} className="text-gray-400" />
+              </div>
+            </div>
+          </div>
+
+          {/* Progress Bar */}
+          <div className="mb-8">
+            <div className="w-full h-6 bg-gray-200 rounded-full overflow-hidden">
+              <div className="h-full flex">
+                <div className="w-1/4 bg-slate-800"></div>
+                <div className="w-1/4 bg-blue-500"></div>
+                <div className="w-1/4 bg-cyan-400"></div>
+                <div className="w-1/4 bg-gray-300"></div>
+              </div>
+            </div>
+          </div>
+
+          {/* Features Section */}
+          <div className="space-y-4">
+            <h3 className="text-lg font-semibold text-gray-900 mb-4">Ключевые возможности</h3>
             
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
-              {[
-                { name: "GPT-4", desc: "Языковые модели" },
-                { name: "PyTorch", desc: "Глубокое обучение" },
-                { name: "CUDA", desc: "GPU ускорение" },
-                { name: "Kubernetes", desc: "Оркестрация" }
-              ].map((tech, index) => (
-                <div key={index} className="text-center">
-                  <div className="w-16 h-16 bg-white/20 rounded-xl flex items-center justify-center mx-auto mb-3">
-                    <Icon name="Cpu" size={32} className="text-white" />
+            <Card className="border border-gray-200 shadow-sm hover:shadow-md transition-shadow">
+              <CardContent className="p-4">
+                <div className="flex items-start space-x-3">
+                  <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <Icon name="Brain" size={20} className="text-white" />
                   </div>
-                  <h3 className="font-semibold text-lg">{tech.name}</h3>
-                  <p className="text-sm opacity-75">{tech.desc}</p>
+                  <div className="flex-1">
+                    <h4 className="font-semibold text-gray-900 mb-1">Нейронные сети</h4>
+                    <p className="text-sm text-gray-600">Глубокое обучение с современными архитектурами</p>
+                  </div>
                 </div>
-              ))}
-            </div>
-            
-            <Button size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-white hover:text-blue-600 text-lg px-8 py-4 h-auto">
+              </CardContent>
+            </Card>
+
+            <Card className="border border-gray-200 shadow-sm hover:shadow-md transition-shadow">
+              <CardContent className="p-4">
+                <div className="flex items-start space-x-3">
+                  <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <Icon name="Zap" size={20} className="text-white" />
+                  </div>
+                  <div className="flex-1">
+                    <h4 className="font-semibold text-gray-900 mb-1">Быстрая обработка</h4>
+                    <p className="text-sm text-gray-600">Обработка данных в реальном времени</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="border border-gray-200 shadow-sm hover:shadow-md transition-shadow">
+              <CardContent className="p-4">
+                <div className="flex items-start space-x-3">
+                  <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <Icon name="Shield" size={20} className="text-white" />
+                  </div>
+                  <div className="flex-1">
+                    <h4 className="font-semibold text-gray-900 mb-1">Безопасность</h4>
+                    <p className="text-sm text-gray-600">Защищенная обработка конфиденциальных данных</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="border border-gray-200 shadow-sm hover:shadow-md transition-shadow">
+              <CardContent className="p-4">
+                <div className="flex items-start space-x-3">
+                  <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <Icon name="Database" size={20} className="text-white" />
+                  </div>
+                  <div className="flex-1">
+                    <h4 className="font-semibold text-gray-900 mb-1">Большие данные</h4>
+                    <p className="text-sm text-gray-600">Анализ массивов данных любого размера</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+
+          {/* CTA Section */}
+          <div className="mt-12 text-center">
+            <h3 className="text-xl font-bold text-gray-900 mb-4">Готовы начать?</h3>
+            <p className="text-gray-600 mb-6 text-sm">
+              Присоединяйтесь к революции искусственного интеллекта
+            </p>
+            <Button 
+              size="lg" 
+              className="w-full bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white mb-4"
+            >
+              <Icon name="Rocket" size={20} className="mr-2" />
+              Начать использование
+            </Button>
+            <Button 
+              variant="outline" 
+              size="lg" 
+              className="w-full border-2 border-gray-300 text-gray-700 hover:border-blue-500"
+            >
               <Icon name="BookOpen" size={20} className="mr-2" />
-              Документация API
+              Документация
             </Button>
           </div>
-        </div>
-      </section>
 
-      {/* CTA Section */}
-      <section className="container mx-auto px-4 py-20 text-center">
-        <div className="max-w-3xl mx-auto">
-          <h2 className="text-4xl font-bold text-gray-900 mb-6">
-            Готовы начать путешествие в будущее?
-          </h2>
-          <p className="text-xl text-gray-600 mb-10">
-            Присоединяйтесь к тысячам разработчиков, которые уже используют нашу платформу
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-lg px-8 py-4 h-auto">
-              <Icon name="ArrowRight" size={20} className="mr-2" />
-              Создать аккаунт
-            </Button>
-            <Button size="lg" variant="outline" className="text-lg px-8 py-4 h-auto border-2 border-gray-200 hover:border-gray-300">
-              <Icon name="MessageCircle" size={20} className="mr-2" />
-              Связаться с нами
-            </Button>
+          {/* Footer */}
+          <div className="mt-12 pt-8 border-t border-gray-200 text-center">
+            <div className="flex items-center justify-center space-x-2 mb-4">
+              <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center">
+                <div className="w-4 h-4 bg-white rounded-sm"></div>
+              </div>
+              <span className="font-bold text-gray-900">AI Platform</span>
+            </div>
+            <p className="text-xs text-gray-500">
+              © 2024 AI Platform. Все права защищены.
+            </p>
           </div>
         </div>
-      </section>
-
-      {/* Footer */}
-      <footer className="bg-gray-900 text-white py-12">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            <div>
-              <div className="flex items-center space-x-2 mb-4">
-                <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center">
-                  <Icon name="Cpu" size={20} className="text-white" />
-                </div>
-                <span className="text-xl font-bold">AI Platform</span>
-              </div>
-              <p className="text-gray-400">
-                Революционная платформа искусственного интеллекта для решения задач будущего.
-              </p>
-            </div>
-            <div>
-              <h3 className="font-semibold mb-4">Продукт</h3>
-              <ul className="space-y-2 text-gray-400">
-                <li><a href="#" className="hover:text-white transition-colors">Возможности</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">API</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Документация</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Цены</a></li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="font-semibold mb-4">Компания</h3>
-              <ul className="space-y-2 text-gray-400">
-                <li><a href="#" className="hover:text-white transition-colors">О нас</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Блог</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Карьера</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Контакты</a></li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="font-semibold mb-4">Связаться</h3>
-              <div className="flex space-x-4">
-                <a href="#" className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-gray-700 transition-colors">
-                  <Icon name="Github" size={20} />
-                </a>
-                <a href="#" className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-gray-700 transition-colors">
-                  <Icon name="Twitter" size={20} />
-                </a>
-                <a href="#" className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-gray-700 transition-colors">
-                  <Icon name="Linkedin" size={20} />
-                </a>
-              </div>
-            </div>
-          </div>
-          <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-            <p>&copy; 2024 AI Platform. Все права защищены.</p>
-          </div>
-        </div>
-      </footer>
+      </div>
     </div>
   );
 }
